@@ -5,9 +5,7 @@
   "type": "module",
   "engines": {
     "node": ">=20",
-    "npm": ">=9.6.3",
-    "yarn": "Please use npm",
-    "pnpm": "Please use npm"
+    "npm": ">=9.6.3"
   },
   "scripts": {
     "dev": "vite --port 3000",
