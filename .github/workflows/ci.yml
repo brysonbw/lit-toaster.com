@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: CI
 
 on:
   push:
@@ -15,11 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: false
           lfs: false
-      - name: Build And Deploy
+      - name: Install
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -31,7 +39,6 @@ jobs:
           app_location: '/' # App source code path
           api_location: '' # Api source code path - optional
           output_location: 'dist/browser' # Built app content directory - optional
-          app_build_command: 'npm ci && npm run build'
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
