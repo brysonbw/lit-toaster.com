@@ -10,7 +10,7 @@ export default defineConfig({
       name: 'csp',
       transformIndexHtml(html) {
         const NONCE = UUIDv4();
-        const csp = `object-src 'none'; media-src 'none'; base-uri 'none'; script-src 'self' 'nonce-${NONCE}'; style-src 'nonce-${NONCE}'; style-src-attr 'nonce-${NONCE}'; img-src 'self' 'nonce-${NONCE}';`;
+        const csp = `object-src 'none'; media-src 'none'; base-uri 'none'; script-src 'self' 'nonce-${NONCE}'; style-src 'self' 'nonce-${NONCE}'; style-src-attr 'nonce-${NONCE}'; img-src 'self' 'nonce-${NONCE}';`;
         html = html.replace(/<style>/g, `<style nonce="${NONCE}">`);
         html = html.replace(
           /<script\s+/g,
