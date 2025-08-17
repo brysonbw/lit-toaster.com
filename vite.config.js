@@ -4,6 +4,12 @@ import eslint from 'vite-plugin-eslint';
 import { UUIDv4 } from './src/utils/helperFunctions.ts';
 
 export default defineConfig({
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    include: ['src/**/*.{spec,test}.{js,ts}'],
+    setupFiles: './src/testing/setup.ts',
+  },
   plugins: [
     eslint(),
     {
