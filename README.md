@@ -2,7 +2,7 @@
 
 Main site for [lit-toaster](https://github.com/brysonbw/lit-toaster) (npm package). Includes minimal setup guide and live demo/examples.
 
-![CI](https://img.shields.io/github/actions/workflow/status/brysonbw/lit-toaster.com/ci.yml?branch=main&style=flat&logo=github&label=CI) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)
+![CI](https://img.shields.io/github/actions/workflow/status/brysonbw/lit-toaster.com/ci.yml?branch=main&style=flat&logo=github&label=CI) ![Build & Deploy](https://img.shields.io/github/actions/workflow/status/brysonbw/lit-toaster.com/build-deploy.yml?branch=main&style=flat&logoColor=278CDA&logo=rocket&label=Build/Deploy) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)
 
 ---
 
