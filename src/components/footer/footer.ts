@@ -38,8 +38,7 @@ export class FooterComponent extends LitElement {
       color: rgb(172, 172, 172);
     }
 
-    a.lit-link {
-      text-decoration: none;
+    .lit-link {
       color: #54f7fdff;
     }
 
@@ -53,6 +52,12 @@ export class FooterComponent extends LitElement {
 
     .title {
       color: #db5e29ff;
+    }
+
+    @media only screen and (max-width: 640px) {
+      .footer-text {
+        font-size: 0.7rem;
+      }
     }
   `;
 }
