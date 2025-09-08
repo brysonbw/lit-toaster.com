@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: false
           lfs: false
       - name: Install
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: npm
