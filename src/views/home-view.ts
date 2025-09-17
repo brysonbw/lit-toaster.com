@@ -90,7 +90,7 @@ export class HomeView extends LitElement {
         newValue !== oldValue
       ) {
         if (this.appToasterElement) {
-          this.appToasterElement.queueLimit = newValue;
+          this.appToasterElement.toastsLimit = newValue;
         }
       }
     }
