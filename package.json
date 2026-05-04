@@ -20,7 +20,7 @@
     "@vaadin/router": "^2.0.1",
     "lit": "^3.3.2",
     "lit-toaster": "^0.2.5",
-    "uuid": "^13.0.0"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
